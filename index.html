@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Miguel Araujo dos Santos, estudante de Análise e Desenvolvimento de Sistemas.">
+    <title>Miguel Araujo dos Santos | Portfólio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7fafc;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            padding: 25px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #477c91;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #477c91;
+        }
+
+        /* APRESENTAÇÃO */
+
+        .hero {
+            padding: 95px 0 85px;
+            text-align: center;
+            background: linear-gradient(
+                135deg,
+                #eaf5f8,
+                #f5f9fb,
+                #eef7f3
+            );
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dceef1;
+            color: #477c91;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #263f50;
+            margin-bottom: 12px;
+        }
+
+        .hero h2 {
+            font-size: 19px;
+            font-weight: normal;
+            color: #628092;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #5b91a5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: #477c91;
+            transform: translateY(-2px);
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: #304b5b;
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #8192a1;
+            font-size: 15px;
+        }
+
+        /* SOBRE MIM */
+
+        .about-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #edf1f5;
+            box-shadow: 0 5px 20px rgba(40, 70, 90, 0.04);
+            text-align: center;
+        }
+
+        .about-card p {
+            max-width: 750px;
+            margin: auto;
+            color: #64748b;
+        }
+
+        /* PROJETO */
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e8eef2;
+            box-shadow: 0 5px 25px rgba(40, 70, 90, 0.05);
+        }
+
+        .project-header {
+            background: #edf6f8;
+            padding: 35px;
+        }
+
+        .project-header h3 {
+            color: #36596b;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .project-header p {
+            color: #718b99;
+        }
+
+        .project-content {
+            padding: 35px;
+        }
+
+        .project-block {
+            margin-bottom: 28px;
+        }
+
+        .project-block h4 {
+            color: #4d8498;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .project-block p {
+            color: #64748b;
+        }
+
+        /* TECNOLOGIAS */
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .tech {
+            background: #edf5f7;
+            color: #4d7d8e;
+            padding: 9px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #eaf2f5;
+            padding: 35px 0;
+            text-align: center;
+            color: #6b8492;
+        }
+
+        footer h3 {
+            color: #36596b;
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #477c91;
+            text-decoration: none;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero h2 {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .project-content,
+            .project-header,
+            .about-card {
+                padding: 25px;
+            }
+
+            .section-title h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Miguel.dev</div>
+
+                <div>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projeto">Projeto</a>
+                    <a href="#tecnologias">Tecnologias</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+
+    <main>
+        <section class="hero">
+            <div class="container">
+
+                <span class="tag">Portfólio acadêmico</span>
+
+                <h1>Miguel Araujo dos Santos</h1>
+
+                <h2>
+                    Análise e Desenvolvimento de Sistemas
+                    | Fatec
+                </h2>
+
+                <p>
+                    Sou estudante de Análise e Desenvolvimento
+                    de Sistemas, apaixonado por tecnologia,
+                    programação e desenvolvimento de soluções
+                    que facilitam o dia a dia.
+                </p>
+
+                <a href="#projeto" class="hero-button">
+                    Conheça meu projeto
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+
+        <section id="sobre">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Sobre mim</h2>
+                    <p>Um pouco sobre minha trajetória acadêmica</p>
+                </div>
+
+                <div class="about-card">
+                    <p>
+                        Meu nome é Miguel Araujo dos Santos,
+                        sou estudante de Análise e Desenvolvimento
+                        de Sistemas na Fatec.
+
+                        Tenho interesse pela área de tecnologia,
+                        programação e desenvolvimento de sistemas.
+                        Busco aprimorar meus conhecimentos e criar
+                        soluções que possam facilitar tarefas
+                        e resolver problemas do cotidiano.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJETO -->
+
+        <section id="projeto">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Meu projeto</h2>
+                    <p>Conheça um pouco do trabalho que desenvolvi</p>
+                </div>
+
+                <div class="project-card">
+
+                    <div class="project-header">
+                        <h3>Sistema de Gerenciamento de Carros</h3>
+
+                        <p>
+                            Desenvolvimento de uma aplicação
+                            para gerenciamento de veículos.
+                        </p>
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-block">
+                            <h4>01. Problema</h4>
+
+                            <p>
+                                A necessidade de organizar e facilitar
+                                o gerenciamento de veículos, permitindo
+                                controlar os carros cadastrados e sua
+                                disponibilidade para venda e aluguel.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <h4>02. O que eu fiz</h4>
+
+                            <p>
+                                Desenvolvi um sistema de gerenciamento
+                                de carros que permite cadastrar, listar,
+                                vender, alugar e excluir veículos,
+                                facilitando o controle e a organização
+                                das informações.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <h4>03. Como eu fiz</h4>
+
+                            <p>
+                                Utilizei React para desenvolver a
+                                interface do sistema, HTML para a
+                                estruturação, CSS para a estilização
+                                e Firebase para armazenar e gerenciar
+                                os dados dos veículos.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <h4>04. Resultado</h4>
+
+                            <p>
+                                Desenvolvi uma aplicação para
+                                gerenciamento de veículos, oferecendo
+                                funcionalidades de cadastro, listagem,
+                                venda, aluguel e exclusão de carros.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS -->
+
+        <section id="tecnologias">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Tecnologias utilizadas</h2>
+                    <p>Ferramentas utilizadas no desenvolvimento do projeto</p>
+                </div>
+
+                <div class="about-card">
+
+                    <div class="technologies">
+                        <span class="tech">React</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">Firebase</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <div class="container">
+
+            <h3>Miguel Araujo dos Santos</h3>
+
+            <p>
+                Estudante de Análise e Desenvolvimento de Sistemas
+                | Fatec
+            </p>
+
+            <p>
+                <a href="https://github.com/SEU-USUARIO">
+                    Meu GitHub
+                </a>
+            </p>
+
+            <p>
+                © 2026 - Portfólio acadêmico.
+                Desenvolvido por Miguel Araujo dos Santos.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
